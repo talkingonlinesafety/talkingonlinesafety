@@ -246,6 +246,9 @@
   .card-side { display: flex; flex-direction: column; gap: 22px; }
   .card-side .note { background: rgba(17, 27, 45, 0.08); border-radius: 18px; padding: 20px 22px; font-size: 1rem; margin: 0; }
   .card-side .note strong { display: block; margin-bottom: 4px; }
+  .eoi-q { list-style: none; counter-reset: q; margin: 0 0 1.2em; padding: 0; }
+  .eoi-q li { counter-increment: q; position: relative; padding: 0 0 14px 48px; font-size: 1.08rem; line-height: 1.5; }
+  .eoi-q li::before { content: counter(q); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow-ink); color: var(--yellow); font-weight: 800; display: grid; place-items: center; font-size: 0.95rem; }
   .card a:not(.btn) { color: var(--yellow-ink); font-weight: 700; }
 
   /* Organisers */
@@ -502,8 +505,13 @@
           <div>
             <p class="eyebrow">Take part</p>
             <h2>How to take part</h2>
-            <p>Submit a short Expression of Interest describing a recent event, case study, or news article involving an online harm and a tool or platform implicated in it (or a tool whose design raises safety concerns for particular groups). Reflect on it through your own disciplinary lens, and tell us what you hope to gain from the workshop.</p>
-            <p>You can draw on your own work where relevant. No prior research on the case is needed.</p>
+            <p>Submit a short Expression of Interest. Along with your name, affiliation, research or professional area, a brief bio, and any access requirements, the form asks three short questions:</p>
+            <ol class="eoi-q">
+              <li>Describe a recent event, case study, or news article involving an online harm and a platform or tool implicated in it (or one whose design raises safety concerns for particular groups), and why it matters.</li>
+              <li>Reflect on it through the lens of your own field.</li>
+              <li>Tell us what you hope to gain from the workshop.</li>
+            </ol>
+            <p>You can draw on your own work where relevant. Prior research on the case is welcome but not required.</p>
             <a class="btn dark" href="https://forms.gle/XU5Pr7GxF3XTVeFM8" target="_blank" rel="noopener">Submit an Expression of Interest</a>
           </div>
           <div class="card-side">
